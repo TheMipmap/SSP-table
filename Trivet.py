@@ -1,18 +1,18 @@
 class trivet:
 
-    def __init__(self,size,id,position,lockedStatus):
+    def __init__(self, size, identification, position, lockedStatus):
         self.size = size
-        self.id = id
+        self.identification = identification
         self.position = position
         self.lockedStatus = lockedStatus
 
-    def get_id():
-        return self.id
-        pass
+    def get_id(self):
+        return self.identification
 
-    def get_position():
+    def get_position(self):
         return self.position
 
-    def get_locked():
+    def get_locked(self):
         return self.lockedStatus
-        pass
+
+t=trivet(1,2,3,4)
