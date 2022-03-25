@@ -23,12 +23,20 @@ dsX.enable(timestep)
 dsY = robot.getdevice('Y-sensor')
 dsY.enable(timestep)
 
+position_goal = [1, 4, 6, 1, 2]
+position_index = 0
+
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
     # Read the sensors:
     # Enter here functions to read sensor data, like:
-    #  val = ds.getValue()
+
+    motorX.setPosition(position_goal[position_index])
+    val = dsX.getValue()
+
+    if val == position_goal[position_index]:
+        position_index += 1
 
     # Process sensor data here.
 
