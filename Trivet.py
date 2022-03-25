@@ -6,13 +6,13 @@ class trivet:
         self.position = position
         self.lockedStatus = lockedStatus
 
-    def get_id(id):
-        return id
+    def get_id():
+        return self.id
         pass
 
-    def get_position(position):
-        return position
+    def get_position():
+        return self.position
 
-    def get_locked(lockedStatus):
-        return lockedStatus
+    def get_locked():
+        return self.lockedStatus
         pass
