@@ -14,5 +14,3 @@ class trivet:
 
     def get_locked(self):
         return self.lockedStatus
-
-t=trivet(1,2,3,4)
