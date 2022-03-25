@@ -1,11 +1,12 @@
 
 class Electro_magnet:
 
-    state = False
+    self.state = False
 
-    def switchOn:
-        state = True
+    def switchOn(self):
+        self.state = True
 
-    def switchOff:
-        state = False
+    def switchOff(self):
+        self.state = False
 
+    
