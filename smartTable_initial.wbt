@@ -1,0 +1,105 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.06576159445917716 -0.08034703791807257 -0.9945952775837912 4.90602351276375
+  position -0.09580779474823749 -1.4764153370605015 0.7559470670477555
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 0.001
+}
+Robot {
+  translation 0 -0.77 0.74
+  children [
+    SliderJoint {
+      jointParameters JointParameters {
+        axis 1 0 0
+      }
+      device [
+        PositionSensor {
+          name "X-sensor"
+        }
+        LinearMotor {
+          name "X-motor"
+          maxVelocity 3
+          minPosition -0.35
+          maxPosition 0.35
+        }
+      ]
+      endPoint Solid {
+        children [
+          SliderJoint {
+            jointParameters JointParameters {
+              axis 0 1 0
+            }
+            device [
+              PositionSensor {
+                name "Y-sensor"
+              }
+              LinearMotor {
+                name "Y-motor"
+                maxVelocity 3
+                maxPosition 1.54
+              }
+            ]
+            endPoint Solid {
+              translation 0 0 0.01
+              children [
+                Connector {
+                  name "EM"
+                  model "Magnet"
+                  type "active"
+                  distanceTolerance 0.4
+                }
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.6 0.6 0.6
+                    metalness 0.7
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.12
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+  controller "testController"
+}
+Table {
+}
+Plate {
+  translation -0.35 0.56 0.74
+}
+Plate {
+  translation 0.35 0.56 0.74
+  name "plate(5)"
+}
+Plate {
+  translation -0.35 -0.01 0.74
+  name "plate(1)"
+}
+Plate {
+  translation 0.35 -0.01 0.74
+  name "plate(4)"
+}
+Plate {
+  translation -0.35 -0.56 0.74
+  name "plate(2)"
+}
+Plate {
+  translation 0.35 -0.56 0.74
+  name "plate(3)"
+}
