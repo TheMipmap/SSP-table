@@ -9,4 +9,4 @@ Matthias Christensen,
 Tobias Aarup,
 Haris Alagic,
 Magnus Knudsen
-og Jeppe Kristensen
+and Jeppe Kristensen
