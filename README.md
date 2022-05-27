@@ -5,3 +5,8 @@ Authors:
 
 Morten Stephansen
 Elias Dam
+Matthias Christensen
+Tobias Aarup
+Haris Alagic
+Magnus Knudsen 
+Jeppe Kristensen
