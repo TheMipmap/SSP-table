@@ -24,9 +24,18 @@ class Queue:
         self.listY = [0.0]
     
     def add(self, positionX, positionY):
+        # For at sikre at bordskåneren ikke kører igennem tallerkenerne, tilføjer vi 3 forskellige positioner.
+        
+        # Den første position kører ud til midten af bordet (på x-aksen) og bliver på samme y-akse-position
         self.listX.append(0.0)
-        self.listX.append(positionX)
+        self.listY.append(self.listY[-1])
+        
+        # Den anden position forbliver i midten af bordet, og kører op langs bordet mod næste y-position
+        self.listX.append(0.0)
         self.listY.append(positionY)
+        
+        # Sidste position kører ind mellem to tallerkener, hvoraf en har spurgt efter bordskåneren.
+        self.listX.append(positionX)
         self.listY.append(positionY)
         
     def resetQueue(self):
